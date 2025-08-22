@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pCuwk</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #7460F8;
+            --light-text: #333333;
+            --dark-text: #E0E0E0;
+            --light-background: #EEEEEE;
+            --dark-background: #121212;
+            --link-background-light: rgba(255, 255, 255, 0.8);
+            --link-background-dark: rgba(30, 30, 30, 0.8);
+        }
+        
+        body {
+            margin: 0;
+            background-color: var(--light-background);
+            font-family: "Rubik", sans-serif;
+            text-align: center;
+            color: var(--light-text);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .container {
+            padding: 64px 5%;
+            max-width: 600px;
+            margin: auto;
+            z-index: 2;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .profile-name {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0 0 4px 0;
+        }
+        
+        .profile-bio {
+            font-size: 16px;
+            color: #666666;
+            margin-bottom: 24px;
+        }
+
+        .link-item {
+            display: block;
+            background-color: var(--link-background-light);
+            padding: 15px 25px;
+            border-radius: 10px;
+            color: #757575;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: none;
+            -webkit-tap-highlight-color: transparent;
+            margin-top: 16px;
+        }
+        
+        .link-item:active,
+        .link-item:focus {
+            background-color: var(--link-background-light);
+            transform: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: var(--dark-background);
+                color: var(--dark-text);
+            }
+            
+            .profile-name {
+                color: var(--dark-text);
+            }
+
+            .profile-bio {
+                color: #A0A0A0;
+            }
+            
+            .link-item {
+                background-color: var(--link-background-dark);
+                color: #B0B0B0;
+            }
+            
+            .link-item:active,
+            .link-item:focus {
+                background-color: var(--link-background-dark);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="particles-js"></div>
+    
+    <div class="container">
+        <header>
+            <img class="profile-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiH-dwallODgaqv-HIaLv2tayDThYEb7PYMRKfbc_H9dxHdJQZamKimeo-JZCjIVa67E7Osn0SGEG4hecel0g6yIJ4cadRj1MUvW8VeSmXgZ04CkrjfUVoCJXe1pA_QKmnNtUF3pj1eNszHgIk05xTUlJYzOG7aFNBwZTzo4c2jDABhCz7_hGTuaa4jPc/s1280/20250823_003154.jpg" alt="HellAng">
+            <h1 class="profile-name">Hells Angels</h1>
+            <p class="profile-bio">Komunitas Motor Flex City</p>
+        </header>
+
+        <a class="link-item" href="https://chat.whatsapp.com/HS3wc8q7Y4x6KXipHln7bO">JOIN GRUP WHATSAPP</a>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        "particles": {
+          "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+          "color": { "value": "#7460F8" },
+          "shape": { "type": "circle" },
+          "opacity": { "value": 0.5 },
+          "size": { "value": 3, "random": true },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#7460F8",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "out_mode": "out"
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": { "enable": false },
+            "onclick": { "enable": false },
+            "resize": true
+          }
+        },
+        "retina_detect": true
+      });
+    </script>
+</body>
+</html>
